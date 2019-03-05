@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Count from './components/count';
 
 export default class App extends React.Component {
 
@@ -26,7 +27,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.biggerText}>{this.state.count}</Text>
+        <Count style={styles.biggerText} count={this.state.count}/>
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             onPress={this.decrement}
